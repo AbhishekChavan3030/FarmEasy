@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FarmEasy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Heebo:wght@300&family=Rubik:ital,wght@0,500;1,300&family=Yantramanav&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+    .all {
+        font-family: 'Bree Serif', serif;
+        font-family: 'Heebo', sans-serif;
+        font-family: 'Rubik', sans-serif;
+        font-family: 'Yantramanav', sans-serif;
+    }
+
+    .header {
+        background-color: green;
+        color: white;
+        padding-top: 15px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        padding-left: 6px;
+        position: fixed;
+        width: 100vw;
+
+    }
+
+
+    .header li {
+        margin: 15px;
+        display: inline;
+
+    }
+
+    li {
+        list-style: none;
+        display: block;
+        max-width: fit-content;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .header li:hover {
+        background-color: rgb(22, 168, 22);
+        /* border-radius: px; */
+
+    }
+
+    li:hover {
+        box-shadow: 1px 1px 1px 1px green;
+        color: white;
+        background-color: green;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+
+    .horizontalcat li {
+        display: inline;
+        margin: 15px;
+
+
+    }
+
+    .horizontalcat {
+        padding: 5px;
+        background-color: rgb(188, 245, 188);
+        position: fixed;
+        margin-top: 6vh;
+        width: 100vw;
+
+    }
+
+    .footer li {
+        display: inline;
+        margin: 10px;
+        position: sticky;
+
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0%;
+        background-color: green;
+        color: white;
+        width: 100vw;
+
+    }
+
+    .footer li:hover {
+        color: black;
+        background-color: rgb(201, 198, 198);
+    }
+
+    .categories {
+        margin-left: 10px;
+    }
+
+    a {
+        list-style: none;
+    }
+
+    .sidebar {
+        float: left;
+    }
+
+    .leftside {
+        background-color: rgb(188, 245, 188);
+        height: 100vh;
+        position: fixed;
+        margin-top: 9vh;
+        width: 15vw;
+    }
+
+    .rightside {
+        margin-top: 9vh;
+    }
+
+    .rightside button {
+        background-color: green;
+        color: white;
+        padding: 8px;
+        border-radius: 10px;
+        border: unset;
+    }
+
+    button:hover {
+        color: black;
+        background-color: rgb(143, 221, 143);
+        box-shadow: 2px 2px 2px 1px gray;
+    }
+
+    .ccard {
+        margin: 10px;
+        display: inline;
+        float: inline-start
+    }
+
+    img {
+        /* border: 1px solid rgb(172, 162, 162); */
+        border-radius: 10px;
+        height: 35vh;
+
+
+    }
+
+
+
+    .products {
+        margin-top: 10vh;
+        margin-left: 16vw;
+        margin-right: 2vw;
+
+        position: relative;
+        width: fit-content;
+        aspect-ratio: 1/0.5;
+        /* border: solid black 2px; */
+        overflow-x: hidden;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+    }
+
+    .png {
+        width: 30px;
+        height: 28px;
+        border: 1px solid white;
+        background-color: ghostwhite;
+    }
+
+    .png:hover {
+        cursor: pointer;
+        border: 3px solid rgb(3, 70, 3);
+    }
+
+    .card-img-top {
+        object-fit: contain;
+
+    }
+
+    .card-img-top:hover {
+        box-shadow: 1px 1px 1px 1px gray;
+        cursor: pointer;
+    }
+
+    .card-text:hover {
+        cursor: pointer;
+        color: blue;
+        text-shadow: 1px 0.5px 0.5px 0.5px gray;
+
+    }
+
+    .card-title:hover {
+        cursor: pointer;
+        color: green;
+
+    }
+
+    ul button {
+        color: rgb(255, 253, 253);
+        border-radius: 8px;
+        width: 4vw;
+        background-color: green;
+        border: unset;
+    }
+
+</style>
+
+<body>
+    <div class="all">
+        <div class="header">
+            <nav>
+                <ul>
+                    <img class="png" src="pngwing.com.png" alt="">
+                    <b>
+                        <li>FarmEasy</li>
+                    </b>
+                    <li>Home</li>
+                    <li>Cart</li>
+                    <li>Become a Seller</li>
+                    <button>Login</button>
+                    <li class="note">This site is Designed for Example! </li>
+                </ul>
+            </nav>
+
+
+
+        </div>
+        <center>
+            <div class="horizontalcat">
+                <li>Electronics</li>
+                <li>Farm </li>
+                <li>Hardware</li>
+                <li>Electric Motors</li>
+                <li>Solar</li>
+            </div>
+        </center>
+        <div class="Main">
+            <div class="sidebar">
+                <div class="leftside">
+                    <center>
+                        <b>Filter</b>
+                    </center>
+
+                    <hr>
+                    <center>
+                        <div class="categories"><b>Categories</b> </div>
+                    </center><br>
+                    <ul id="Categories">
+                        <li>Farm Component </li>
+                        <li>Garden Tools</li>
+                        <li>Lawn and Gardening</li>
+                        <li>Home Improvment</li>
+                        <li></li>
+                    </ul>
+                    <hr>
+                    <ul class="costomerrating">
+                        <li>4 ☆ & Above</li>
+                        <li>3 ☆ & Above</li>
+                        <li>2 ☆ & Above</li>
+                        <li>1 ☆ & Above</li>
+                    </ul>
+                    <hr>
+                    <ul id="Offer">
+                        <li>Buy More, Save More</li>
+                        <li>No cost Emi</li>
+                        <li>Special Discount</li>
+                    </ul>
+                    <hr>
+                    <ul class="stock">
+                        <li>Include Out of Stock</li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="sidebar">
+                <div class="rightside">
+                    <div class="products">
+
+                        
+
+                        <!-- <script>
+                            function discount(){
+                                Math.floor(Math.random(10, 80) * 100);}
+                            document.getElementById("demo").innerHTML = discount;
+                        </script>
+                        <p class="demo"></p> -->
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/grass-trimmer/o/k/m/manual-52cc-2stroke-air-cooled-petrol-engine-mini-tiller-original-imaggkskbh38wwug.jpeg?q=70"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.17,999</h5>
+                                        <p class="card-text">RICO ITALY 52CC 2STROKE AIR COOLED PETROL ENGINE</p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://rukminim1.flixcart.com/image/416/416/kq8dua80/garden-tool-set/d/i/q/garden-shears-flower-cutter-secom-original-imag4a8dszfyfbdk.jpeg?q=70"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.499</h5>
+                                        <p class="card-text">Garden Shears Sharp Cutter Pruners Scissor</p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://rukminim1.flixcart.com/image/416/416/kflftzk0/pruner/h/z/p/zone120-the-shopping-zone-original-imafwffevvrqbueg.jpeg?q=70"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.179</h5>
+                                        <p class="card-text">ALLTACK IN Garden Plant Branch Scissors Flower Cutting
+                                            Cutter</p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/garden-tool-set/p/p/i/42g-1-50-inch-heavy-duty-metal-raingun-used-for-irrigation-in-original-imagm5pffkmbgbgh.jpeg?q=70"
+                                        <class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.3299</h5>
+                                        <p class="card-text">JALKIPARI 42G 1.50"INCH HEAVY DUTY METAL RAINGUN </p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://rukminim1.flixcart.com/image/416/416/kqb8pzk0/garden-tool-set/s/3/m/garden-tool-set-garden-tool-kit-6-tools-with-pruner-erin-original-imag4cn4zffrffu9.jpeg?q=70"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.179</h5>
+                                        <p class="card-text">ALLTACK IN Garden Plant Branch Scissors Flower Cutting
+                                            Cutter</p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/garden-tool-set/g/m/w/gardening-shadenet-50-shade-3x20-meters-role-full-green-thick-original-imagkguubfcuzujt.jpeg?q=70"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.3150</h5>
+                                        <p class="card-text">bio blooms Gardening Shadenet 50% Shade 3X20 Meters Role
+                                        </p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <!-- 
+                        https://m.media-amazon.com/images/I/71bqQwBMy5L._AC_UL320_.jpg
+                        Rs.539
+                        Kraft Seeds 20KG food for the soil, with Cow Urine, Cow Dung, Organic -->
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://m.media-amazon.com/images/I/71bqQwBMy5L._AC_UL320_.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.539</h5>
+                                        <p class="card-text">Kraft Seeds 20KG food for the soil, with Cow Urine, Cow
+                                            Dung, Organic
+                                        </p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://m.media-amazon.com/images/I/41f6MjgDg+L._AC_UL320_.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.1999</h5>
+                                        <p class="card-text">Supvox® Electric Agriculture Sprayer with 3m Pipe & 2
+                                            Nozzles</p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://m.media-amazon.com/images/I/51VvOq2R1HL._AC_UL320_.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.284</h5>
+                                        <p class="card-text">Plant Climbing & Plant Trellis Netting, Creeper Plant
+                                            Support Net</p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://m.media-amazon.com/images/I/51NKKv35JzL._AC_UL320_.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.170</h5>
+                                        <p class="card-text">FreshDcart Heavy Duty Garden Farming Gloves</p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+
+                                    <img src="https://m.media-amazon.com/images/I/51+LQJmjK8L._AC_UL320_.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.269</h5>
+                                        <p class="card-text">Kraft Seeds Pressure Spray Pump (2L) | Gardening Water Pump
+                                            Sprayer</p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://m.media-amazon.com/images/I/71ImZH2s-8L._AC_UL320_.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.499</h5>
+                                        <p class="card-text">3 Arm Sprinkler for Watering Garden 360 Degree Sprayer</p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://m.media-amazon.com/images/I/71-0bwJ9oqL._AC_UL320_.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.645</h5>
+                                        <p class="card-text">12V DC Electric Battery Operated Sprayer Pump Motor 12 Volt
+                                        </p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://m.media-amazon.com/images/I/41HGcf9zxvL._AC_UL320_.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.169</h5>
+                                        <p class="card-text">Cucumber Vegetable Seeds(Pack Of 60 Seeds)</p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="ccard">
+                            <div class="card">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="https://m.media-amazon.com/images/I/514jVfKZBiL._AC_UL320_.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rs.23,000</h5>
+                                        <p class="card-text">Power Tiller/Cultivator/Rotary/Weeder with 2 Stroke 3 HP
+                                            Engine</p>
+                                        <button>Buy Now</button>
+                                        <button>Add to Cart</button>
+                                        <!-- <a href="#" class="btn btn-primary">Buy Now</a>
+                          <a href="#" class="btn btn-primary">Add to Cart</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="foot">
+                    <center>
+                        <div class="footer">
+                            <ul>
+                                <li>Become a Seller</li>
+                                <li>Contact Us</li>
+                                <li>About Us</li>
+                                <li>FAQ</li>
+                                <li>Privacy</li>
+                                <li>Report</li>
+                                <li>Return Policy</li>
+                                <li>Help</li>
+                            </ul>
+                        </div>
+                    </center>
+                </div>
+
+            </div>
+</body>
+
+</html>
